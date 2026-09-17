@@ -1,14 +1,9 @@
 name: generate animation
 
 on:
-  # Executa a cada 24 horas automaticamente
   schedule:
     - cron: "0 */24 * * *" 
-  
-  # Permite rodar manualmente na aba "Actions"
   workflow_dispatch:
-  
-  # Executa sempre que houver um push no branch principal
   push:
     branches:
       - main
@@ -21,12 +16,10 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      # 1. Baixa o repositório
-      - name: checkout
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # 2. Gera os arquivos SVG da cobrinha
-      - name: generate github-contribution-grid-snake.svg
+      - name: Generate contribution snake SVGs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -34,9 +27,8 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # 3. Envia os arquivos gerados para um branch chamado 'output'
-      - name: push github-contribution-grid-snake.svg to the output branch
-        uses: crazy-max/gh-action-github-pages@v3
+      - name: Push generated SVGs to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
