@@ -48,11 +48,9 @@ Projeto de robô autônomo de baixo custo utilizando sensores de distância, IMU
 ### 📈 Estatísticas do GitHub
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=xLucasMelo&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=xLucasMelo&show_icons=true&theme=radical&include_all_commits=true" />
   <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xLucasMelo&layout=compact&theme=radical" />
 </p>
-
-### 🐍 Onde a mágica acontece
 
 <p align="center">
   <picture>
